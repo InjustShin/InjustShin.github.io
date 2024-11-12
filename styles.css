@@ -1,0 +1,11 @@
+button {
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+
+}
+
+button:hover div:first-child{
+    transform: rotate(45);
+}
