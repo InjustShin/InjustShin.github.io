@@ -25,6 +25,7 @@ label {
     border: 1;
     background: #3e93ab;
     gap: 0.65rem;
+    transition: all 0.3s ease;
 }
 label:hover {
     cursor: pointer;
@@ -80,6 +81,7 @@ label div::after {
 .menu li {
     text-align: center;
     flex-grow: 1;
+    transition: all 0.3s ease;
 }
 .menu li:hover {
     background: rgba(0, 0, 0, 0.3);
