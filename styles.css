@@ -17,14 +17,13 @@ main {
 /*Label hamburguesa y cerrar*/
 label {
     display: none;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     border-right: 1px solid #fff;
     align-items: center;
     justify-content: center;
     border: 1;
     background: #3e93ab;
-    gap: 0.65rem;
     transition: all 0.3s ease;
 }
 label:hover {
@@ -32,12 +31,13 @@ label:hover {
     background: rgba(0, 0, 0, 0.3);
 }
 label div {
-    background-color: black;
+    background: black;
     position: relative;
-    width: 1rem;
-    height: 2px;
+    /*tamaño de la linea de la hamburguesa*/
+    width: 32px;
+    height: 4px;
     border-radius: 5px;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 label div::before,
 label div::after {
@@ -46,19 +46,19 @@ label div::after {
     top: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 4px;
     border-radius: 5px;
     background: black;
-    background-color: black;
     transform-origin: left;
-    transition: all 0.3s;
     transform-origin: center;
+    transition: all 0.5s ease;
 }
+/*los top del before y after son la separación de las líneas de la hamburguesa*/
 label div::before {
-    top: -7px;
+    top: -12px;
 }
 label div::after {
-    top: 7px;
+    top: 12px;
 }
 #menu-checkbox:checked ~ label div {
     background: none;
@@ -80,22 +80,28 @@ label div::after {
 }
 .menu li {
     text-align: center;
+    font-size: 14px;
+    font-weight: bold;
     flex-grow: 1;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 .menu li:hover {
     background: rgba(0, 0, 0, 0.3);
 }
 .menu li a {
     display: block;
-    padding: 15px 20px;
+    padding: 1rem 1rem;
     color: #fff;
     text-decoration: none;
 }
 /*Media query para el menu responsive*/
 @media (max-width: 768px) {
-    header label {
+    header {
+        display: fixed;
+    }
+    label {
         display: flex;
+        height: 3rem;
     }
     .menu {
         position: absolute;
